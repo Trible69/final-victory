@@ -1,0 +1,72 @@
+ocus_tree = {
+	id = MEX
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = Mexico
+		}
+	}
+	#Focus for The Military at the Top
+	focus = {
+		id = Mexico_the_military_at_the_top
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = Mexico_our_grand_empire 
+		}
+		mutually_exclusive = { 
+			focus = Mexico_a_mexican_republic 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience= 10
+      add_war_support= 15
+		}
+	}
+	#Focus for Our Grand Empire
+	focus = {
+		id = Mexico_our_grand_empire
+		icon = GFX_focus_mex_redeem_aztlan
+		x = 7
+		y = 0
+		cost = 3
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = Mexico_a_mexican_republic 
+		}
+		mutually_exclusive = { 
+			focus = Mexico_the_military_at_the_top 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 80
+		}
+		completion_reward = {
+			add_political_power= 150
+		}
+	}
+	#Focus for A Mexican Republic
+	focus = {
+		id = Mexico_a_mexican_republic
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 0
+		cost = 3
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = Mexico_our_grand_empire 
+		}
+		mutually_exclusive = { 
+			focus = Mexico_the_military_at_the_top 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+#End of focuses 
